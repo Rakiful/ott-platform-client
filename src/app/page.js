@@ -1,4 +1,11 @@
 "use client";
+
+import HeroSlider from "@/components/HeroSlider";
+
 export default function Home() {
-  return <div>Home</div>;
+  return (
+    <div>
+      <HeroSlider />
+    </div>
+  );
 }
