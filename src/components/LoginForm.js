@@ -28,7 +28,7 @@ export default function LoginForm() {
 
   return (
     <div className="flex flex-col p-10 items-center justify-center border-red-600 border-2 rounded-2xl text-white">
-      <h1 className="text-5xl mb-10 text-red-600">Login</h1>
+      <h1 className="text-5xl mb-10 text-red-500">Login</h1>
 
       {/* Email + Password Login */}
       <form onSubmit={handleLogin} className="flex flex-col gap-3 w-80">

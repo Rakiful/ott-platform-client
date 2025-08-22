@@ -8,7 +8,7 @@ export default function ProductCard({ product }) {
       </figure>
       <div className="card-body items-center text-center">
         <h2 className="card-title">{product.name}</h2>
-        <h1 className="text-red-600 font-bold text-2xl">{product.price}$</h1>
+        <h1 className="text-red-500 font-bold text-2xl">{product.price}$</h1>
         <div>
           <p className="max-h-20 overflow-hidden">{product.description}</p>
           ...more

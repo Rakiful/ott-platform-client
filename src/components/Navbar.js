@@ -14,7 +14,7 @@ export default function Navbar() {
       <li>
         <Link href="/products">Products</Link>
       </li>
-      <li>
+      {/* <li>
         <details>
           <summary>Parent</summary>
           <ul className="p-2 bg-red-600">
@@ -26,7 +26,7 @@ export default function Navbar() {
             </li>
           </ul>
         </details>
-      </li>
+      </li> */}
     </>
   );
 
@@ -59,7 +59,7 @@ export default function Navbar() {
               {links}
             </ul>
           </div>
-          <h1 className="text-2xl font-bold text-red-600">OTT Platform</h1>
+          <h1 className="text-2xl font-bold text-red-500">OTT Platform</h1>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>
