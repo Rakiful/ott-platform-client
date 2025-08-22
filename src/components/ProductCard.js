@@ -9,7 +9,10 @@ export default function ProductCard({ product }) {
       <div className="card-body items-center text-center">
         <h2 className="card-title">{product.name}</h2>
         <h1 className="text-red-600 font-bold text-2xl">{product.price}$</h1>
-        <p className="max-h-30 overflow-auto">{product.description}</p>
+        <div>
+          <p className="max-h-20 overflow-hidden">{product.description}</p>
+          ...more
+        </div>
         <div className="card-actions">
           <Link
             href={`/products/${product._id}`}
