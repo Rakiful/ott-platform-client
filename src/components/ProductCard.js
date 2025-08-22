@@ -13,9 +13,9 @@ export default function ProductCard({ product }) {
         <div className="card-actions">
           <Link
             href={`/products/${product._id}`}
-            className="btn bg-red-600 text-white border-0 shadow"
+            className="btn bg-red-600 text-white border-0 shadow mt-3"
           >
-            Buy Now
+            Details
           </Link>
         </div>
       </div>
