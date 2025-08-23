@@ -1,6 +1,6 @@
 # 🎬 OTT Platform  
 
-An OTT (Over-The-Top) streaming platform built with **Next.js 14, NextAuth, TailwindCSS, and Express.js backend**.  
+An OTT (Over-The-Top) streaming platform built with **Next.js 15, NextAuth, TailwindCSS, and Express.js backend**.  
 This platform allows users to browse and watch movies, series, and dramas. Admins can add new products, and users can log in to manage their profiles.  
 
 ---
