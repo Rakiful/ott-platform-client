@@ -1,5 +1,5 @@
 async function getProduct(id) {
-  const res = await fetch(`http://localhost:5000/api/products/${id}`, {
+  const res = await fetch(`https://ott-platform-server.vercel.app/api/products/${id}`, {
     cache: "no-store", // fresh data
   });
   return res.json();

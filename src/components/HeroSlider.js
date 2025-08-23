@@ -17,7 +17,7 @@ export default function HeroSlider() {
       navigation
       autoplay={{ delay: 5000, disableOnInteraction: false }}
       loop={true}
-      className="h-164"
+      className="h-40 md:h-164"
     >
       {slides.map((src, index) => (
         <SwiperSlide key={index} className="flex justify-center items-center">

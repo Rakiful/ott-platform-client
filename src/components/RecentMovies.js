@@ -3,7 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 async function getProducts() {
-  const res = await fetch("http://localhost:5000/api/products", {
+  const res = await fetch("https://ott-platform-server.vercel.app/api/products", {
     cache: "no-store",
   });
   return res.json();
@@ -13,7 +13,7 @@ export default async function RecentMovies() {
   const movies = await getProducts();
 
   return (
-    <section className="bg-black text-white py-10 px-5">
+    <section className="bg-black text-white py-10 mb-10 px-5">
       {/* Section Title */}
       <h2 className="text-3xl md:text-4xl text-center text-red-500 font-bold mb-12">
         Recent <span className="text-white">Movies</span>

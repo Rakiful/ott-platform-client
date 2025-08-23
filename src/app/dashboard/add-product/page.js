@@ -1,18 +1,38 @@
 "use client";
 import { useForm } from "react-hook-form";
 import axios from "axios";
+import Swal from "sweetalert2";
+import { useState } from "react";
 
 export default function AddProductPage() {
   const { register, handleSubmit, reset } = useForm();
+  const [loading, setLoading] = useState(false);
 
   const onSubmit = async (data) => {
     try {
-      await axios.post("http://localhost:5000/api/products", data);
-      alert("✅ Product added successfully!");
+      setLoading(true); // show spinner
+      const result = await axios.post(
+        "https://ott-platform-server.vercel.app/api/products",
+        data
+      );
+
+      setLoading(false); // hide spinner
+      Swal.fire({
+        icon: "success",
+        title: "Product Added!",
+        text: "✅ Your product has been added successfully.",
+        showConfirmButton: false,
+      });
+
       reset();
     } catch (err) {
+      setLoading(false);
       console.error(err);
-      alert("❌ Failed to add product");
+      Swal.fire({
+        icon: "error",
+        title: "Failed!",
+        text: "❌ Unable to add product. Please try again.",
+      });
     }
   };
 
@@ -35,7 +55,15 @@ export default function AddProductPage() {
             className="w-full border rounded px-3 py-2"
           />
         </div>
-
+        <div>
+          <label className="block mb-1 font-medium">Product Description</label>
+          <input
+            placeholder="Product Description"
+            type="text"
+            {...register("description", { required: true })}
+            className="w-full border rounded px-3 py-2"
+          />
+        </div>
         <div>
           <label className="block mb-1 font-medium">Price</label>
           <input
@@ -45,7 +73,6 @@ export default function AddProductPage() {
             className="w-full border rounded px-3 py-2"
           />
         </div>
-
         <div>
           <label className="block mb-1 font-medium">Image URL</label>
           <input
@@ -58,9 +85,13 @@ export default function AddProductPage() {
 
         <button
           type="submit"
-          className="bg-red-600 text-white px-5 py-2 rounded hover:bg-red-700"
+          disabled={loading}
+          className="bg-red-600 text-white px-5 py-2 rounded hover:bg-red-700 flex items-center justify-center gap-2"
         >
-          Add Product
+          {loading && (
+            <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+          )}
+          {loading ? "Adding..." : "Add Product"}
         </button>
       </form>
     </div>

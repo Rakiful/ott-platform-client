@@ -59,7 +59,7 @@ export default function Navbar() {
               {links}
             </ul>
           </div>
-          <h1 className="text-2xl font-bold text-red-500">OTT Platform</h1>
+          <Link href={"/"} className="text-2xl font-bold text-red-500">OTT Platform</Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{links}</ul>

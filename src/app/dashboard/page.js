@@ -29,15 +29,13 @@ export default function Dashboard() {
         <h2 className="text-xl font-semibold  mb-4">Recent Activity</h2>
         <ul className="space-y-3">
           <li className="">
-            ✅ New Movie <span className="font-medium">"Borbaad"</span> added
+            ✅ New Movie <span className="font-medium">Borbaad</span> added
           </li>
           <li className="">
-            🛒 Order #1024 placed by{" "}
-            <span className="font-medium">Md rakif</span>
+            🛒 Order #1024 placed by <span className="font-medium">Md rakif</span>
           </li>
           <li className="">
-            📦 Drama{" "}
-            <span className="font-medium">"Bachelor point session 5" </span>New
+            📦 Drama <span className="font-medium">Bachelor point session 5 </span>New
             Episode released
           </li>
         </ul>

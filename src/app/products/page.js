@@ -1,7 +1,7 @@
 import ProductCard from "../../components/ProductCard";
 
 async function getProducts() {
-  const res = await fetch("http://localhost:5000/api/products");
+  const res = await fetch("https://ott-platform-server.vercel.app/api/products");
   return res.json();
 }
 
